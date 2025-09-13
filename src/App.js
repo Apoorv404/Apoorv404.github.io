@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import AppNavbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="dark-mode">
+      <AppNavbar setActiveSection={setActiveSection} />
+
+      {/* Home Page (no footer lock) */}
+      {activeSection === "home" && <Hero />}
+
+      {/* Other Pages wrapped in flexbox container */}
+      {activeSection !== "home" && (
+        <div className="page-container">
+          <div className="page-content">
+            {activeSection === "projects" && <Projects />}
+            {activeSection === "contact" && <Contact />}
+            {activeSection === "about" && <About />}
+          </div>
+          <Footer />
+        </div>
+      )}
+
+      {/* Home page footer shown normally */}
+      {activeSection === "home" && <Footer />}
     </div>
   );
 }
