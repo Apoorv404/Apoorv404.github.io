@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <section id="about" className="about" data-aos="fade-up">
-      <h2>About Me</h2>
+      <h2 className="section-title text-center mb-5">About Me</h2>
       <p>
         I am a final Year Computer Science and Engineering (AI & ML) student passionate about
         solving problems with technology. I have worked on projects involving

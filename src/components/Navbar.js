@@ -3,9 +3,9 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 export default function AppNavbar({ setActiveSection }) {
   return (
-    <Navbar expand="lg" variant="dark" className="bg-black navbar-custom" sticky="top">
+    <Navbar expand="lg" variant="dark" className="navbar-custom" sticky="top">
       <Container>
-        <Navbar.Brand href="#" className="navbar-brand-custom">
+        <Navbar.Brand href="#" className="navbar-brand-custom" onClick={() => setActiveSection("home")}>
           Apoorv
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
