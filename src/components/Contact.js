@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-modern py-5" data-aos="fade-up">
       <Container>
-        <h2 className="section-title text-center mb-5">Contact Me</h2>
+        <h2 className="section-title text-center mb-5">Message Me</h2>
         <Row className="align-items-center">
           <Col md={6} className="mb-5 mb-md-0">
             <h3 className="gradient-text mb-4">Let's Talk</h3>

@@ -5,7 +5,7 @@ export default function AppNavbar({ setActiveSection }) {
   return (
     <Navbar expand="lg" variant="dark" className="navbar-custom" sticky="top">
       <Container>
-        <Navbar.Brand href="#" className="navbar-brand-custom" onClick={() => setActiveSection("home")}>
+        <Navbar.Brand href="/" className="navbar-brand-custom">
           Apoorv
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
