@@ -13,7 +13,7 @@
   --muted: #bfc3c6;
   --text: #f5f5f5;
   --accent: #ffcc00;
-  --accent-dark: #ffcc00;
+  --accent-dark: #EB5B00;
   --grad1: #22c55e;
   --grad2: #3b82f6;
   --card-border: #222;
@@ -167,7 +167,17 @@ a:hover { color: var(--accent); }
 
 /* Skills in hero (small pills) */
 .skills-container { margin-top: 80px; }
-.skills-title { font-size: 1.6rem; color: var(--accent); font-weight: 700; margin-bottom: 1rem; }
+
+.skills-title { 
+  font-size: 1.6rem; 
+  background: linear-gradient(var(--accent), var(--accent-dark)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  color: transparent; 
+  font-weight: 700; margin-bottom: 1rem; 
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -277,7 +287,7 @@ a:hover { color: var(--accent); }
 .gradient-text {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(to right, var(--grad1), var(--grad2));
+  background: linear-gradient(var(--accent), var(--accent-dark));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -291,8 +301,11 @@ a:hover { color: var(--accent); }
   color: #dcdcdc;
 }
 .contact-item .icon {
-  color: var(--grad1);
+  background: linear-gradient(to right, var(--accent), var(--accent-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
   font-size: 1.2rem;
+  color: var(--accent-dark);
 }
 .contact-item a { color: #dcdcdc; }
 .contact-item a:hover { color: var(--accent); }
@@ -316,8 +329,10 @@ a:hover { color: var(--accent); }
 
 /* Gradient action button */
 .btn-gradient {
-  background: linear-gradient(90deg, var(--grad1), var(--grad2)) !important;
-  color: white !important;
+  background: linear-gradient(90deg, var(--accent)) !important;
+  color: #111 !important;
+  border: none !important;
+  font-weight: bold !important;
   border: none !important;
   padding: 10px 22px !important;
   border-radius: 30px !important;
@@ -325,6 +340,7 @@ a:hover { color: var(--accent); }
   transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .btn-gradient:hover {
+  background: linear-gradient(90deg, var(--accent-dark)) !important;
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(59,130,246,0.18);
 }

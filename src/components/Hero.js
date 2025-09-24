@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Button } from "react-bootstrap";
 
 export default function Hero() {
@@ -32,15 +31,19 @@ export default function Hero() {
           <h3 className="skills-title mb-4">Tech Stack</h3>
           <div className="skills-grid">
             <span className="skill">Python</span>
-            <span className="skill">SQL</span>
             <span className="skill">Flask</span>
+            <span className="skill">Jinja2</span>
+            <span className="skill">Selenium</span>
+            <span className="skill">BeautifulSoup</span>
+            <span className="skill">SQL</span>
             <span className="skill">TensorFlow</span>
             <span className="skill">PyTorch</span>
-            <span className="skill">Qiskit</span>
+            <span className="skill">NumPy</span>
+            <span className="skill">Pandas</span>
             <span className="skill">Scikit-Learn</span>
-            <span className="skill">MongoDB</span>
             <span className="skill">React</span>
             <span className="skill">Bootstrap</span>
+            <span className="skill">MongoDB</span>
           </div>
         </div>
       </Container>
