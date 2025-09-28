@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "react-bootstrap";
 import { FaGithub, FaLinkedin, FaHackerrank } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
