@@ -165,6 +165,17 @@ a:hover { color: var(--accent); }
   transform: translateY(-2px);
 }
 
+.btn-accent:hover:not(:disabled) {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255,204,0,0.3);
+}
+
+.btn-accent:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* Skills in hero (small pills) */
 .skills-container { margin-top: 80px; }
 
@@ -261,24 +272,81 @@ a:hover { color: var(--accent); }
 }
 .project-card {
   background: var(--surface);
-  color: var(--text);
-  border-radius: 12px;
+  border-radius: 16px;
   border: 1px solid var(--card-border);
-  padding: 18px;
-  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+/* gradient border glow */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 16px;
+  padding: 1px; /* border thickness */
+  background: linear-gradient(135deg, var(--grad1), var(--grad2));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; 
+  pointer-events: none;
+}
+
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
-  background: #212121;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  background: #1e1e1e;
 }
 .project-card .card-title { font-weight: 700; }
 .project-card p { color: #d3d3d3; }
 
-/* ----------------------------
-   CONTACT
-   ---------------------------- */
+/* Project buttons (separate from global .btn-accent) */
+.btn-project {
+  background-color: var(--accent) !important;  /* <-- ensures visible */
+  color: #111 !important;
+  font-weight: 600;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 6px 14px !important;
+  font-size: 0.9rem !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.25s ease;
+}
+
+.btn-project:hover {
+  background-color: var(--accent-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.25);
+}
+
+.btn-project-disabled {
+  background-color: #444 !important;
+  color: #bbb !important;
+  border-radius: 20px !important;
+  padding: 6px 14px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+/* CONTACT */
 .contact-modern {
   padding: 60px 20px 90px;
   background: var(--bg);
