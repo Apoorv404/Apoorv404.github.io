@@ -16,7 +16,7 @@ export default function Projects() {
                   Built an image classifier for Indian bay leaf dataset using hybrid
                   CNN + Quantum Neural Network layers.
                 </Card.Text>
-                <div className="d-flex gap-2">
+                <div className="d-flex justify-content-between">
                   <Button
                     variant="link"
                     className="btn-project btn-sm"
@@ -49,7 +49,7 @@ export default function Projects() {
                   Developed a workout tracker using natural language processing
                   (via Nutritionix API) to parse user input about exercises.
                 </Card.Text>
-                <div className="d-flex gap-2">
+                <div className="d-flex justify-content-between">
                   <Button variant="link" className="btn-project-disabled btn-sm" disabled>
                     <FiExternalLink className="me-1" /> Live Demo
                   </Button>
@@ -76,7 +76,7 @@ export default function Projects() {
                   Python script which tweets at your internet service provider if
                   your download/upload speeds are below promised range.
                 </Card.Text>
-                <div className="d-flex gap-2">
+                <div className="d-flex justify-content-between">
                   <Button variant="link" className="btn-project-disabled btn-sm" disabled>
                     <FiExternalLink className="me-1" /> Live Demo
                   </Button>

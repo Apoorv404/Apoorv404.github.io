@@ -19,7 +19,6 @@ function App() {
     <div className="dark-mode">
       <AppNavbar setActiveSection={setActiveSection} />
 
-      {/* Home Page (no footer lock) */}
       {activeSection === "home" && <Hero />}
 
       {/* Other Pages wrapped in flexbox container */}
@@ -34,7 +33,6 @@ function App() {
         </div>
       )}
 
-      {/* Home page footer shown normally */}
       {activeSection === "home" && <Footer />}
     </div>
   );

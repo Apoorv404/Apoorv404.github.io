@@ -212,9 +212,7 @@ a:hover { color: var(--accent); }
   transform: translateY(-4px);
 }
 
-/* ----------------------------
-   ABOUT
-   ---------------------------- */
+/* ABOUT */
 .about {
   padding: 100px 20px;
   max-width: 900px;
@@ -227,6 +225,15 @@ a:hover { color: var(--accent); }
   margin-bottom: 20px;
   color: var(--accent);
 }
+.about h3 {
+  background: linear-gradient(var(--accent), var(--accent-dark)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  color: transparent; 
+  font-weight: 700; margin-bottom: 1rem;
+}
+
 .about p {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -239,7 +246,7 @@ a:hover { color: var(--accent); }
   margin-bottom: 25px;
   color: var(--text);
 }
-.skills { /* used by About component - pill style */
+.skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -263,9 +270,84 @@ a:hover { color: var(--accent); }
   transform: translateY(-3px);
 }
 
-/* ----------------------------
-   PROJECTS
-   ---------------------------- */
+/* Timeline  */
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 0;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 12px 30px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-content {
+  display: inline-block;
+  max-width: 360px;
+}
+
+.timeline-content h4 {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Responsive: stack all items left on small screens */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+
+
+/* PROJECTS */
 .projects-section {
   padding: 60px 20px 90px;
   background: transparent;
