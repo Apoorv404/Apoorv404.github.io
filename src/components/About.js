@@ -4,13 +4,13 @@ export default function About() {
       <h2 className="section-title text-center mb-5">About Me</h2>
 
       <p>
-        I am a final Year Computer Science and Engineering (AI & ML) student passionate about
+        I am a Final Year Computer Science and Engineering (AI & ML) student passionate about
         solving problems with technology. I have worked on projects involving
-        quantum machine learning, automation bots, and APIs.
+        quantum machine learning, automation bots and APIs.
         <br /><br />
         I enjoy learning new technologies and applying them to build full stack
         applications. In my free time, I like reading science novels, playing
-        harmonium, and exploring mobile games.
+        harmonium and exploring mobile games.
       </p>
 
       {/* Education Section */}
@@ -48,9 +48,9 @@ export default function About() {
       <h3 className="mt-5">Achievements</h3>
       <ul className="skills">
         <li>5-Star Badge on HackerRank</li>
-        <li>Research Paper on Quantum ML (2025)</li>
-        <li>Certified Python Developer</li>
         <li>Elite Badge in NPTEL Course</li>
+        <li>Certified Python Developer</li>
+        <li>Research Paper on Quantum ML (2025)</li>
       </ul>
 
       {/* Hobbies Section */}

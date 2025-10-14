@@ -15,7 +15,7 @@ export default function Hero() {
           Building Full Stacks Applications with Python
         </h2>
         <p className="hero-description">
-          I'm a Computer Science and Engineering (AI & ML) student passionate about building full stack applications with experience in Python, Flask, React, and databases.
+          I'm a Computer Science and Engineering (AI & ML) student passionate about building full stack applications with experience in Python, Flask, React and databases.
         </p>
 
         <Button
