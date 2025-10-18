@@ -20,7 +20,7 @@ export default function Projects() {
                   <Button
                     variant="link"
                     className="btn-project btn-sm"
-                    href="https://apoorv404.github.io/Hybrid-CNN-QNN-Image-Classifier/"
+                    href="https://apoorv404-hybrid-cnn-qnn-image-classifier.streamlit.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
