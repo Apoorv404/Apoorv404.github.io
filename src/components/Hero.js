@@ -30,6 +30,7 @@ export default function Hero() {
         <div className="skills-container" data-aos="fade-up">
           <h3 className="skills-title mb-4">Tech Stack</h3>
           <div className="skills-grid">
+            <span className="skill">Linux</span>
             <span className="skill">Python</span>
             <span className="skill">Flask</span>
             <span className="skill">Jinja2</span>
