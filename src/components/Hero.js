@@ -3,7 +3,39 @@ import { Container, Button } from "react-bootstrap";
 export default function Hero() {
   return (
     <section id="hero" className="hero-section" data-aos="fade-up">
-      <Container className="text-center">
+      <div className="hero-logos" aria-hidden="true">
+        <img
+          src="https://cdn.simpleicons.org/python/3776AB"
+          alt="Python logo"
+          className="hero-logo logo-1"
+        />
+        <img
+          src="https://cdn.simpleicons.org/linux/000000"
+          alt="Linux logo"
+          className="hero-logo logo-2"
+        />
+        <img
+          src="https://cdn.simpleicons.org/mongodb/47A248"
+          alt="MongoDB logo"
+          className="hero-logo logo-3"
+        />
+        <img
+          src="https://cdn.simpleicons.org/react/61DAFB"
+          alt="React logo"
+          className="hero-logo logo-4"
+        />
+        <img
+          src="https://cdn.simpleicons.org/tensorflow/FF6F00"
+          alt="TensorFlow logo"
+          className="hero-logo logo-5"
+        />
+        <img
+          src="https://cdn.simpleicons.org/github/FFFFFF"
+          alt="GitHub logo"
+          className="hero-logo logo-6"
+        />
+      </div>
+      <Container className="text-center hero-inner">
         <div className="pfp-container mb-4">
           <img src="pfp.png" alt="Apoorv Avatar" className="pfp-img" />
         </div>
