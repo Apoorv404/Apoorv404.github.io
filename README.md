@@ -1,5 +1,9 @@
 # Apoorv404.github.io
 
+![Vite](https://img.shields.io/badge/Built%20With-Vite-646CFF?logo=vite)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![Deployment](https://img.shields.io/badge/Deployed-GitHub%20Pages-black?logo=github)
+
 This repository contains the source code for my personal website, which is built using React and GitHub Pages. The website showcases my portfolio and contact information.
 
 ## Live Demo
@@ -12,6 +16,8 @@ You can view the live website at: [https://Apoorv404.github.io](https://Apoorv40
 
 ## Technologies Used
 - React
+- Vite
+- GitHub Actions (for deployment automation)
 - GitHub Pages
 
 ## Installation
@@ -31,13 +37,21 @@ You can view the live website at: [https://Apoorv404.github.io](https://Apoorv40
     ```bash 
     npm run dev
      ```
-4. Open your browser and navigate to `http://localhost:3000` to view the website.
+4. Open your browser and navigate to `http://localhost:5173` to view the website.
 ## Deployment
-To deploy the website to GitHub Pages, run the following command:
+Deployment is automated via GitHub Actions.
+
+On every push to the `main` branch:
+
+- The project is built using Vite
+
+- The `dist/` folder is deployed to the `gh-pages` branch
+
+You can also manually deploy using:
 ```bash
 npm run deploy
 ```
-Make sure to configure the `homepage` field in `package.json` with your GitHub Pages URL.
+
 
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
