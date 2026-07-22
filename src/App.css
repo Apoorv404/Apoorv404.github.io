@@ -192,6 +192,9 @@ a:hover { color: var(--accent); }
   margin-bottom: 0.8rem;
 }
 .hero-subtitle .at-symbol {
+  color: #bfc3c6;
+}
+.hero-subtitle .role {
   color: #ffffff;
 }
 .hero-subtitle a {

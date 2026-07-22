@@ -44,7 +44,8 @@ export default function Hero() {
           Hi, I'm <span className="gradient-name">Apoorv</span>
         </h1>
         <h2 className="hero-subtitle mb-3">
-          Programmer Analyst Trainee <span className="at-symbol">@</span><a href="https://www.cognizant.com/" target="_blank" rel="noopener noreferrer">Cognizant</a>
+          <span className="role">Programmer Analyst Trainee</span> <span className="at-symbol">@</span>
+          <a href="https://www.cognizant.com/" target="_blank" rel="noopener noreferrer">Cognizant</a>
         </h2>
         <p className="hero-description">
           I'm a Computer Science and Engineering (AI & ML) graduate. Currently working as a Programmer Analyst Trainee at Cognizant, where I am gaining valuable experience in Quality Engineering and Assurance (QEA) domain.
@@ -67,6 +68,8 @@ export default function Hero() {
             <span className="skill">Java</span>
             <span className="skill">SQL</span>
             <span className="skill">Jira</span>
+            <span className="skill">Git</span>
+            <span className="skill">Postman</span>
             <span className="skill">React</span>
             <span className="skill">Bootstrap</span>
             <span className="skill">Flask</span>
