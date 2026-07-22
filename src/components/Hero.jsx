@@ -44,10 +44,10 @@ export default function Hero() {
           Hi, I'm <span className="gradient-name">Apoorv</span>
         </h1>
         <h2 className="hero-subtitle mb-3">
-          Building Full Stacks Applications with Python
+          Programmer Analyst Trainee <span className="at-symbol">@</span><a href="https://www.cognizant.com/" target="_blank" rel="noopener noreferrer">Cognizant</a>
         </h2>
         <p className="hero-description">
-          I'm a Computer Science and Engineering (AI & ML) student passionate about building full stack applications with experience in Python, Flask, React and databases.
+          I'm a Computer Science and Engineering (AI & ML) graduate. Currently working as a Programmer Analyst Trainee at Cognizant, where I am gaining valuable experience in Quality Engineering and Assurance (QEA) domain.
         </p>
 
         <Button
@@ -64,18 +64,22 @@ export default function Hero() {
           <div className="skills-grid">
             <span className="skill">Linux</span>
             <span className="skill">Python</span>
-            <span className="skill">Flask</span>
-            <span className="skill">Jinja2</span>
-            <span className="skill">Selenium</span>
-            <span className="skill">BeautifulSoup</span>
+            <span className="skill">Java</span>
             <span className="skill">SQL</span>
+            <span className="skill">Jira</span>
+            <span className="skill">React</span>
+            <span className="skill">Bootstrap</span>
+            <span className="skill">Flask</span>
+            <span className="skill">Selenium</span>
+            <span className="skill">ApachePOI</span>
+            <span className="skill">TestNG</span>
+            <span className="skill">Cucumber</span>
+            <span className="skill">BeautifulSoup</span>
             <span className="skill">TensorFlow</span>
             <span className="skill">PyTorch</span>
             <span className="skill">NumPy</span>
             <span className="skill">Pandas</span>
             <span className="skill">Scikit-Learn</span>
-            <span className="skill">React</span>
-            <span className="skill">Bootstrap</span>
             <span className="skill">MongoDB</span>
           </div>
         </div>

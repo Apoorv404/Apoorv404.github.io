@@ -35,7 +35,7 @@ export default function Contact() {
           <Col md={6} className="mb-5 mb-md-0">
             <h3 className="gradient-text mb-4">Let's Talk</h3>
             <p>
-              I'm open to discussing AI/ML projects, collaborations, or partnership opportunities.
+              I'm open to discussing projects, collaborations, or partnership opportunities.
             </p>
 
             <div className="contact-item mt-4">

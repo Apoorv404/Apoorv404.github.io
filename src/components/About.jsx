@@ -5,13 +5,12 @@ export default function About() {
 
       <div className="about-card">
         <p>
-          I am a Final Year Computer Science and Engineering (AI & ML) student passionate about
-          solving problems with technology. I have worked on projects involving
-          quantum machine learning, automation bots and APIs.
+          I am a Computer Science and Engineering (AI & ML) graduate passionate about
+          solving problems with technology. I am currently working as a Programmer Analyst Trainee at Cognizant, where I am gaining valuable experience in Quality Engineering and Assurance (QEA) domain.
           <br /><br />
           I enjoy learning new technologies and applying them to build full stack
           applications. In my free time, I like reading science novels, playing
-          harmonium and exploring mobile games.
+          piano and exploring video games.
         </p>
       </div>
 
@@ -24,7 +23,7 @@ export default function About() {
           <div className="timeline-content">
             <h4>B.Tech in Computer Science (AI & ML)</h4>
             <span className="timeline-date">2022 – 2026</span>
-            <p>Rajarambapu Institute of Technology, Islampur</p>
+            <p>Rajarambapu Institute of Technology, Ishwarpur</p>
           </div>
         </div>
 
@@ -64,7 +63,7 @@ export default function About() {
         <h3>Hobbies</h3>
         <ul className="skills">
           <li>Reading Science Novels</li>
-          <li>Playing Harmonium</li>
+          <li>Playing Piano</li>
           <li>Playing Video Games</li>
           <li>Watching Tech Videos</li>
           <li>Exploring New Technologies</li>
