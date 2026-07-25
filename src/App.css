@@ -195,7 +195,7 @@ a:hover { color: var(--accent); }
   color: #bfc3c6;
 }
 .hero-subtitle .role {
-  color: #ffffff;
+  color: #12a3ec;
 }
 .hero-subtitle a {
   color: inherit;
@@ -203,12 +203,11 @@ a:hover { color: var(--accent); }
 }
 .hero-subtitle a:hover,
 .hero-subtitle a:focus {
-  color: #10c8e8;
+  color: #26efe9;
 }
 .hero-description {
   max-width: 760px;
   margin: 0 auto 1rem auto;
-  color: #d9d9d9;
   font-size: 1rem;
   line-height: 1.6;
 }
