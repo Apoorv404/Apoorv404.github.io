@@ -6,6 +6,38 @@
   min-height: 100vh;
 }
 
+.snowfall {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  top: -5vh;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(210, 235, 255, 0.65);
+  user-select: none;
+  animation-name: snowfall-drift;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes snowfall-drift {
+  from { transform: translate3d(0, -5vh, 0) rotate(0deg); }
+  to { transform: translate3d(24px, 105vh, 0) rotate(360deg); }
+}
+
+@media (max-width: 576px) {
+  .snowflake:nth-child(n + 17) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snowfall { display: none; }
+}
+
 /* Color variables */
 :root {
   --bg: #0b0b0b;
@@ -120,6 +152,7 @@ a:hover { color: var(--accent); }
   opacity: 0.34; /* base visibility */
   filter: grayscale(100%) contrast(1.05);
   transform: translateZ(0);
+  animation: hero-logo-float var(--float-duration, 7s) ease-in-out var(--float-delay, 0s) infinite;
   transition: transform 0.6s ease, opacity 0.35s ease;
 }
 .hero-logo.logo-1 { top: 6%; left: 6%; transform: rotate(-14deg) scale(1.15); opacity: 0.7; }
@@ -129,9 +162,24 @@ a:hover { color: var(--accent); }
 .hero-logo.logo-5 { top: 6%; right: 6%; transform: rotate(10deg) scale(1.2); opacity: 0.6; }
 .hero-logo.logo-6 { top: 43%; left: 7%; transform: rotate(2deg) scale(1.05); }
 
+@keyframes hero-logo-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+
+.hero-subtitle .role {
+  display: inline-block;
+  animation: role-fade-in 0.45s ease both;
+}
+
+@keyframes role-fade-in {
+  from { opacity: 0; translate: 0 5px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
 /* reduce size on smaller screens so they don't intrude */
 @media (max-width: 991px) {
-  .hero-logo { width: 110px; opacity: 0.16; }
+  .hero-logo { width: 110px; opacity: 0.16; animation-duration: 9s; }
   .hero-logo.logo-1 { left: 3%; top: 4%; opacity: 0.18; }
   .hero-logo.logo-2 { right: 6%; bottom: 10%; opacity: 0.17; }
   .hero-logo.logo-3 { right: 48%; top: 10%; opacity: 0.17; }
@@ -146,6 +194,13 @@ a:hover { color: var(--accent); }
   .hero-logo.logo-1 { opacity: 0.14; }
   .hero-logo.logo-3 { display: none; } /* keep very small screens clean */
   .hero-logo.logo-5 { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo,
+  .hero-subtitle .role {
+    animation: none;
+  }
 }
 
 /* pfp container (rounded gradient disk) */

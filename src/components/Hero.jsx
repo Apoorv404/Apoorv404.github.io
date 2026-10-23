@@ -1,7 +1,48 @@
+import { useEffect, useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import { FaJava } from "react-icons/fa";
 
+const roles = [
+  "Programmer Analyst Trainee",
+  "Quality Engineering & Assurance",
+  "Developer",
+];
+
 export default function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [logoMotion] = useState(() =>
+    Array.from({ length: 6 }, () => {
+      const duration = 6 + Math.random() * 5;
+      return {
+        "--float-duration": `${duration}s`,
+        "--float-delay": `${-Math.random() * duration}s`,
+      };
+    }),
+  );
+
+  useEffect(() => {
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let intervalId;
+
+    const updateRotation = () => {
+      window.clearInterval(intervalId);
+
+      if (!motionPreference.matches) {
+        intervalId = window.setInterval(() => {
+          setRoleIndex((currentIndex) => (currentIndex + 1) % roles.length);
+        }, 3500);
+      }
+    };
+
+    updateRotation();
+    motionPreference.addEventListener("change", updateRotation);
+
+    return () => {
+      window.clearInterval(intervalId);
+      motionPreference.removeEventListener("change", updateRotation);
+    };
+  }, []);
+
   return (
     <section id="hero" className="hero-section" data-aos="fade-up">
       <div className="hero-logos" aria-hidden="true">
@@ -9,30 +50,36 @@ export default function Hero() {
           src="https://cdn.simpleicons.org/python/3776AB"
           alt="Python logo"
           className="hero-logo logo-1"
+          style={logoMotion[0]}
         />
         <FaJava
           className="hero-logo logo-2"
           aria-hidden="true"
+          style={logoMotion[1]}
         />
         <img
           src="https://cdn.simpleicons.org/mongodb/47A248"
           alt="MongoDB logo"
           className="hero-logo logo-3"
+          style={logoMotion[2]}
         />
         <img
           src="https://cdn.simpleicons.org/react/61DAFB"
           alt="React logo"
           className="hero-logo logo-4"
+          style={logoMotion[3]}
         />
         <img
           src="https://cdn.simpleicons.org/tensorflow/FF6F00"
           alt="TensorFlow logo"
           className="hero-logo logo-5"
+          style={logoMotion[4]}
         />
         <img
           src="https://cdn.simpleicons.org/github/FFFFFF"
           alt="GitHub logo"
           className="hero-logo logo-6"
+          style={logoMotion[5]}
         />
       </div>
       <Container className="text-center hero-inner">
@@ -44,7 +91,7 @@ export default function Hero() {
           Hi, I'm <span className="gradient-name">Apoorv</span>
         </h1>
         <h2 className="hero-subtitle mb-3">
-          <span className="role">Programmer Analyst Trainee</span> <span className="at-symbol">@</span>
+          <span key={roles[roleIndex]} className="role">{roles[roleIndex]}</span> <span className="at-symbol">@</span>
           <a href="https://www.cognizant.com/" target="_blank" rel="noopener noreferrer">Cognizant</a>
         </h2>
         <p className="hero-description">

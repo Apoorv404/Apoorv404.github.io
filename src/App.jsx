@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Snowfall from "./components/Snowfall";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="dark-mode">
+      <Snowfall />
       <AppNavbar setActiveSection={setActiveSection} />
 
       {activeSection === "home" && <Hero />}
