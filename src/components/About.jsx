@@ -54,7 +54,7 @@ export default function About() {
           <li>5-Star Badge on HackerRank</li>
           <li>Elite Badge in NPTEL Course</li>
           <li>Certified Python Developer</li>
-          <li>Research Paper on Quantum ML (2025)</li>
+          <li>Canonical Certified Ubuntu Linux Professional</li>
         </ul>
       </div>
 

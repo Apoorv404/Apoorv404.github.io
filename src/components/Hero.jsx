@@ -1,4 +1,5 @@
 import { Container, Button } from "react-bootstrap";
+import { FaJava } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -9,10 +10,9 @@ export default function Hero() {
           alt="Python logo"
           className="hero-logo logo-1"
         />
-        <img
-          src="https://cdn.simpleicons.org/linux/000000"
-          alt="Linux logo"
+        <FaJava
           className="hero-logo logo-2"
+          aria-hidden="true"
         />
         <img
           src="https://cdn.simpleicons.org/mongodb/47A248"
