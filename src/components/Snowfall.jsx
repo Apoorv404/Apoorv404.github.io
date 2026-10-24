@@ -1,23 +1,22 @@
-const flakes = Array.from({ length: 28 }, (_, index) => {
-  const duration = 10 + ((index * 7) % 11);
-  const delay = -((index * 5) % 20);
+const particles = Array.from({ length: 100 }, (_, index) => {
+  const duration = 18 + ((index * 13) % 28);
+  const delay = -((index * 17) % duration);
 
   return {
-    left: `${(index * 37) % 100}%`,
-    fontSize: `${8 + ((index * 3) % 9)}px`,
+    top: `${(index * 37) % 100}%`,
+    width: `${2 + ((index * 3) % 4)}px`,
+    height: `${2 + ((index * 3) % 4)}px`,
     animationDuration: `${duration}s`,
     animationDelay: `${delay}s`,
-    opacity: 0.25 + ((index * 13) % 45) / 100,
+    opacity: 0.35 + ((index * 13) % 55) / 100,
   };
 });
 
 export default function Snowfall() {
   return (
-    <div className="snowfall" aria-hidden="true">
-      {flakes.map((style, index) => (
-        <span className="snowflake" style={style} key={index}>
-          {index % 4 === 0 ? "❄︎" : "•"}
-        </span>
+    <div className="particle-background" aria-hidden="true">
+      {particles.map((style, index) => (
+        <span className="background-particle" style={style} key={index} />
       ))}
     </div>
   );

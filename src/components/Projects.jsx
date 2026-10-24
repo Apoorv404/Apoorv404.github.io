@@ -1,11 +1,14 @@
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import AnimatedTitle from "./AnimatedTitle";
 
 export default function Projects() {
   return (
     <section id="projects" className="projects-section py-5" data-aos="fade-up">
       <Container>
-        <h2 className="section-title text-center mb-5">Projects</h2>
+        <AnimatedTitle className="section-title text-center mb-5">
+          Projects
+        </AnimatedTitle>
         <Row>
           {/* Quantum Image Classifier */}
           <Col md={4} className="mb-4">

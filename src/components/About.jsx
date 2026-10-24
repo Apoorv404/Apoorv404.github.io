@@ -1,7 +1,11 @@
+import AnimatedTitle from "./AnimatedTitle";
+
 export default function About() {
   return (
     <section id="about" className="about" data-aos="fade-up">
-      <h2 className="section-title text-center mb-5">About Me</h2>
+      <AnimatedTitle className="section-title text-center mb-5">
+        About Me
+      </AnimatedTitle>
 
       <div className="about-card">
         <p>

@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-.snowfall {
+.particle-background {
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -14,28 +14,30 @@
   pointer-events: none;
 }
 
-.snowflake {
+.background-particle {
   position: absolute;
-  top: -5vh;
+  left: 0;
+  border-radius: 50%;
   color: #fff;
-  text-shadow: 0 0 8px rgba(210, 235, 255, 0.65);
+  background: #fff;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
   user-select: none;
-  animation-name: snowfall-drift;
+  animation-name: particle-drift;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes snowfall-drift {
-  from { transform: translate3d(0, -5vh, 0) rotate(0deg); }
-  to { transform: translate3d(24px, 105vh, 0) rotate(360deg); }
+@keyframes particle-drift {
+  from { transform: translate3d(-8px, 0, 0); }
+  to { transform: translate3d(calc(100vw + 8px), 0, 0); }
 }
 
 @media (max-width: 576px) {
-  .snowflake:nth-child(n + 17) { display: none; }
+  .background-particle:nth-child(n + 61) { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .snowfall { display: none; }
+  .particle-background { display: none; }
 }
 
 /* Color variables */
@@ -89,6 +91,48 @@ a:hover { color: var(--accent); }
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 1.5rem;
+}
+
+.animated-title-letter {
+  display: inline-block;
+}
+
+.animated-title-space {
+  display: inline-block;
+  width: 0.3em;
+}
+
+.animated-title.is-visible {
+  animation: title-float 3.2s ease-in-out 0.9s infinite;
+}
+
+.animated-title.is-visible .animated-title-letter {
+  animation: title-letter-reveal 0.55s cubic-bezier(0.2, 0.75, 0.3, 1) both;
+}
+
+@keyframes title-letter-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.45em) rotateX(-50deg);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes title-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-title.is-visible,
+  .animated-title-letter {
+    animation: none;
+  }
 }
 
 /* ----------------------------
