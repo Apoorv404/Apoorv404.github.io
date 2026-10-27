@@ -58,3 +58,8 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 ## License
 This project is licensed under the MIT License.
+
+
+## Caution
+- This repository is a personal project and may contain sensitive information. Please do not use any content from this repository without permission.
+- This website collects visitors' IP addresses and other information for analytics purposes.
