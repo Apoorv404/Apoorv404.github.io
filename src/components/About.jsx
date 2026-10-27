@@ -28,6 +28,7 @@ export default function About() {
             <h4>B.Tech in Computer Science (AI & ML)</h4>
             <span className="timeline-date">2022 – 2026</span>
             <p>Rajarambapu Institute of Technology, Ishwarpur</p>
+            <p>7.56 CGPA</p>
           </div>
         </div>
 
@@ -37,6 +38,7 @@ export default function About() {
             <h4>Higher Secondary (PCM)</h4>
             <span className="timeline-date">2020 – 2022</span>
             <p>Shri Hanumantrao Chate Jr. College of Science, Satara</p>
+            <p>74%</p>
           </div>
         </div>
 
@@ -46,6 +48,7 @@ export default function About() {
             <h4>Secondary School</h4>
             <span className="timeline-date">2014 – 2020</span>
             <p>Maharaja Sayajirao Vidyalaya, Satara</p>
+            <p>93.60%</p>
           </div>
         </div>
         </div>
