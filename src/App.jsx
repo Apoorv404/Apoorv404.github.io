@@ -1,14 +1,15 @@
 
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import AOS from "aos";
 import AppNavbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import About from "./components/About";
 import Footer from "./components/Footer";
 import Snowfall from "./components/Snowfall";
 import "./App.css";
+
+const Projects = lazy(() => import("./components/Projects"));
+const Contact = lazy(() => import("./components/Contact"));
+const About = lazy(() => import("./components/About"));
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -72,9 +73,17 @@ function App() {
       {activeSection !== "home" && (
         <div className="page-container">
           <div className="page-content">
-            {activeSection === "projects" && <Projects />}
-            {activeSection === "contact" && <Contact />}
-            {activeSection === "about" && <About />}
+            <Suspense
+              fallback={
+                <div className="text-center py-5" role="status" aria-live="polite">
+                  Loading...
+                </div>
+              }
+            >
+              {activeSection === "projects" && <Projects />}
+              {activeSection === "contact" && <Contact />}
+              {activeSection === "about" && <About />}
+            </Suspense>
           </div>
 
           <Footer />
