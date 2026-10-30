@@ -4,7 +4,7 @@ import AOS from "aos";
 import AppNavbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import Snowfall from "./components/Snowfall";
+import Background from "./components/Background";
 import "./App.css";
 
 const Projects = lazy(() => import("./components/Projects"));
@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="dark-mode">
-      <Snowfall />
+      <Background />
 
       <AppNavbar setActiveSection={setActiveSection} />
 

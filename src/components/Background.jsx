@@ -12,7 +12,7 @@ const particles = Array.from({ length: 100 }, (_, index) => {
   };
 });
 
-export default function Snowfall() {
+export default function Background() {
   return (
     <div className="particle-background" aria-hidden="true">
       {particles.map((style, index) => (
