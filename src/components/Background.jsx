@@ -12,11 +12,29 @@ const particles = Array.from({ length: 100 }, (_, index) => {
   };
 });
 
+const shootingStars = [
+  { top: "16%", left: "8%", duration: "31s", delay: "3s", fromLeft: true },
+  { top: "38%", left: "91%", duration: "37s", delay: "14s" },
+  { top: "67%", left: "58%", duration: "43s", delay: "25s" },
+];
+
 export default function Background() {
   return (
     <div className="particle-background" aria-hidden="true">
       {particles.map((style, index) => (
         <span className="background-particle" style={style} key={index} />
+      ))}
+      {shootingStars.map((star, index) => (
+        <span
+          className={`shooting-star${star.fromLeft ? " shooting-star--from-left" : ""}`}
+          key={index}
+          style={{
+            top: star.top,
+            left: star.left,
+            animationDuration: star.duration,
+            animationDelay: star.delay,
+          }}
+        />
       ))}
     </div>
   );
