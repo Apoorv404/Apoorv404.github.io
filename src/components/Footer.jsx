@@ -14,7 +14,7 @@ export default function Footer() {
           <a href="https://leetcode.com/u/Apoorv404" target="_blank" rel="noreferrer"><SiLeetcode /></a>
           <a href="https://x.com/ApoorvJadhav" target="_blank" rel="noreferrer"><FaXTwitter /></a>
         </div>
-        <p>© {new Date().getFullYear()} Apoorv Jadhav | Built with React & GitHub Pages</p>
+        <p>© {new Date().getFullYear()} Apoorv Jadhav</p>
       </Container>
     </footer>
   );
