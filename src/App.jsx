@@ -1,4 +1,3 @@
-
 import { lazy, Suspense, useState, useEffect } from "react";
 import AOS from "aos";
 import AppNavbar from "./components/Navbar";
@@ -45,7 +44,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({}),
+      body: JSON.stringify({page: window.location.pathname}),
     })
       .then(async (response) => {
         if (!response.ok) {
