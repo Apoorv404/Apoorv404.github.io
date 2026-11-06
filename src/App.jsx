@@ -4,7 +4,6 @@ import AppNavbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Background from "./components/Background";
-import "./App.css";
 
 const Projects = lazy(() => import("./components/Projects"));
 const Contact = lazy(() => import("./components/Contact"));
