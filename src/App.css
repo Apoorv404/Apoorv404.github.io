@@ -244,17 +244,17 @@ a:hover { color: var(--accent); }
   position: absolute;
   width: 160px;
   height: auto;
-  opacity: 0.34; /* base visibility */
-  filter: grayscale(100%) contrast(1.05);
+  opacity: 0.5; /* base visibility */
   transform: translateZ(0);
   animation: hero-logo-float var(--float-duration, 7s) ease-in-out var(--float-delay, 0s) infinite;
   transition: transform 0.6s ease, opacity 0.35s ease;
 }
-.hero-logo.logo-1 { top: 6%; left: 6%; transform: rotate(-14deg) scale(1.15); opacity: 0.7; }
-.hero-logo.logo-2 { bottom: 13%; right: 6%; transform: rotate(8deg) scale(1.25); opacity: 0.4; }
-.hero-logo.logo-3 { top: 43%; right: 7%; transform: rotate(-15deg) scale(1.05); opacity: 0.6; }
-.hero-logo.logo-4 { bottom: 12%; left: 8%; transform: rotate(-6deg) scale(1.1); opacity: 0.5; }
-.hero-logo.logo-5 { top: 6%; right: 6%; transform: rotate(10deg) scale(1.2); opacity: 0.6; }
+.hero-logo.logo-2 { color: #ed8c15; }
+.hero-logo.logo-1 { top: 6%; left: 6%; transform: rotate(-14deg) scale(1.15); opacity: 0.9 }
+.hero-logo.logo-2 { bottom: 13%; right: 6%; transform: rotate(8deg) scale(1.25); opacity: 0.7}
+.hero-logo.logo-3 { top: 43%; right: 7%; transform: rotate(-15deg) scale(1.05); opacity: 0.8}
+.hero-logo.logo-4 { bottom: 12%; left: 8%; transform: rotate(-6deg) scale(1.1); opacity: 0.7 }
+.hero-logo.logo-5 { top: 6%; right: 6%; transform: rotate(10deg) scale(1.2); opacity: 0.7 }
 .hero-logo.logo-6 { top: 43%; left: 7%; transform: rotate(2deg) scale(1.05); }
 
 @keyframes hero-logo-float {
@@ -327,12 +327,32 @@ a:hover { color: var(--accent); }
   margin: 12px 0;
 }
 .gradient-name {
-  background: linear-gradient(to right, var(--grad1), var(--grad2));
+  background: linear-gradient(
+    90deg,
+    #ff3b8d,
+    #ff9f43,
+    #ffe14d,
+    #41e7a5,
+    #38bdf8,
+    #8b5cf6,
+    #ff3b8d
+  );
+  background-size: 250% 100%;
+  animation: chromatic-shift 5s ease-in-out infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
   font-weight: 800;
+}
+
+@keyframes chromatic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-name { animation: none; }
 }
 .hero-subtitle {
   font-size: 1.25rem;
@@ -393,11 +413,7 @@ a:hover { color: var(--accent); }
 
 .skills-title { 
   font-size: 1.6rem; 
-  background: linear-gradient(var(--accent), var(--accent-dark)); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  background-clip: text; 
-  color: transparent; 
+  color: var(--text);
   font-weight: 700; margin-bottom: 1rem; 
 }
 
@@ -438,11 +454,7 @@ a:hover { color: var(--accent); }
   color: var(--accent);
 }
 .about h3 {
-  background: linear-gradient(var(--accent), var(--accent-dark)); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  background-clip: text; 
-  color: transparent; 
+  color: var(--text);
   font-weight: 700; margin-bottom: 1rem;
 }
 
@@ -691,25 +703,20 @@ a:hover { color: var(--accent); }
 .gradient-text {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(var(--accent), var(--accent-dark));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--text);
 }
 .contact-item {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 14px;
-  color: #dcdcdc;
 }
 .contact-item .icon {
   background: linear-gradient(to right, var(--accent), var(--accent-dark));
   -webkit-background-clip: text;
   background-clip: text;
   font-size: 1.2rem;
-  color: var(--accent-dark);
+  color: var(--accent);
 }
 .contact-item a { color: #dcdcdc; }
 .contact-item a:hover { color: var(--accent); }

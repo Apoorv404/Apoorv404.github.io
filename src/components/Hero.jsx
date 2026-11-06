@@ -8,6 +8,30 @@ const roles = [
   "Developer",
 ];
 
+const skills = [
+  "Linux",
+  "Python",
+  "Java",
+  "SQL",
+  "Jira",
+  "Git",
+  "Postman",
+  "React",
+  "Bootstrap",
+  "Flask",
+  "Selenium",
+  "ApachePOI",
+  "TestNG",
+  "Cucumber",
+  "BeautifulSoup",
+  "TensorFlow",
+  "PyTorch",
+  "NumPy",
+  "Pandas",
+  "Scikit-Learn",
+  "MongoDB",
+];
+
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [logoMotion] = useState(() =>
@@ -110,27 +134,14 @@ export default function Hero() {
         <div className="skills-container" data-aos="fade-up">
           <h3 className="skills-title mb-4">Tech Stack</h3>
           <div className="skills-grid">
-            <span className="skill">Linux</span>
-            <span className="skill">Python</span>
-            <span className="skill">Java</span>
-            <span className="skill">SQL</span>
-            <span className="skill">Jira</span>
-            <span className="skill">Git</span>
-            <span className="skill">Postman</span>
-            <span className="skill">React</span>
-            <span className="skill">Bootstrap</span>
-            <span className="skill">Flask</span>
-            <span className="skill">Selenium</span>
-            <span className="skill">ApachePOI</span>
-            <span className="skill">TestNG</span>
-            <span className="skill">Cucumber</span>
-            <span className="skill">BeautifulSoup</span>
-            <span className="skill">TensorFlow</span>
-            <span className="skill">PyTorch</span>
-            <span className="skill">NumPy</span>
-            <span className="skill">Pandas</span>
-            <span className="skill">Scikit-Learn</span>
-            <span className="skill">MongoDB</span>
+            {skills.map((skill) => (
+              <span
+                className="skill"
+                key={skill}
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </Container>

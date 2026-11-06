@@ -44,7 +44,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({page: window.location.pathname}),
+      body: JSON.stringify(),
     })
       .then(async (response) => {
         if (!response.ok) {
