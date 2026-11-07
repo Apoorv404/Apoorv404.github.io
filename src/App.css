@@ -386,7 +386,7 @@ a:hover { color: var(--accent); }
   background-color: var(--accent) !important;
   color: #111 !important;
   border: none !important;
-  font-weight: bold !important;
+  font-weight: 525 !important;
   font-size: 1.5rem !important;
   border-radius: 30px !important;
   padding: 12px 30px !important;
@@ -660,7 +660,7 @@ a:hover { color: var(--accent); }
 .btn-project {
   background-color: var(--accent) !important;
   color: #111 !important;
-  font-weight: 600;
+  font-weight: normal;
   border: none !important;
   border-radius: 20px !important;
   padding: 6px 14px !important;
@@ -685,7 +685,7 @@ a:hover { color: var(--accent); }
   padding: 6px 14px !important;
   font-size: 0.9rem !important;
   text-decoration: none !important;
-  font-weight: 600;
+  font-weight: normal;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -743,11 +743,10 @@ a:hover { color: var(--accent); }
   background: linear-gradient(90deg, var(--accent)) !important;
   color: #111 !important;
   border: none !important;
-  font-weight: bold !important;
+  font-weight: normal !important;
   border: none !important;
   padding: 10px 22px !important;
   border-radius: 30px !important;
-  font-weight: 700;
   transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 .btn-gradient:hover {
