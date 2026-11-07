@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container, Button } from "react-bootstrap";
-import { FaJava } from "react-icons/fa";
 
 const roles = [
   "Programmer Analyst Trainee",
@@ -71,14 +70,15 @@ export default function Hero() {
     <section id="hero" className="hero-section" data-aos="fade-up">
       <div className="hero-logos" aria-hidden="true">
         <img
-          src="https://cdn.simpleicons.org/python/3776AB"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
           alt="Python logo"
           className="hero-logo logo-1"
           style={logoMotion[0]}
         />
-        <FaJava
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg"
+          alt="Java logo"
           className="hero-logo logo-2"
-          aria-hidden="true"
           style={logoMotion[1]}
         />
         <img
@@ -88,13 +88,13 @@ export default function Hero() {
           style={logoMotion[2]}
         />
         <img
-          src="https://cdn.simpleicons.org/react/61DAFB"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
           alt="React logo"
           className="hero-logo logo-4"
           style={logoMotion[3]}
         />
         <img
-          src="https://cdn.simpleicons.org/tensorflow/FF6F00"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tensorflow/tensorflow-original.svg"
           alt="TensorFlow logo"
           className="hero-logo logo-5"
           style={logoMotion[4]}
